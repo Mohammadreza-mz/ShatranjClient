@@ -3,7 +3,7 @@ package model;
 
 
 public abstract class Piece {
-    int x,y;
+    public int x,y;
 
     public Piece(int x, int y) {
         this.x = x;
