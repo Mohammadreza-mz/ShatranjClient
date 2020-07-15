@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPageController">
+   <children>
+      <Button layoutX="207.0" layoutY="93.0" mnemonicParsing="false" onAction="#gameRequestPressed" prefHeight="25.0" prefWidth="186.0" text="Game Request" />
+      <Button layoutX="207.0" layoutY="235.0" mnemonicParsing="false" onAction="#historyPressed" prefHeight="25.0" prefWidth="186.0" text="History" />
+      <Button layoutX="207.0" layoutY="188.0" mnemonicParsing="false" onAction="#scoreBoardPressed" prefHeight="25.0" prefWidth="186.0" text="Score Board" />
+      <Button layoutX="207.0" layoutY="279.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="25.0" prefWidth="186.0" text="Profile" />
+      <Button layoutX="207.0" layoutY="141.0" mnemonicParsing="false" onAction="#watchOthersGamesPressed" prefHeight="25.0" prefWidth="186.0" text="Watch Other's Games" />
+   </children>
+</AnchorPane>

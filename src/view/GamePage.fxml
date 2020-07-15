@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePageController">
+   <children>
+      <ImageView fitHeight="546.0" fitWidth="564.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/board.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rookBL" fitHeight="78.0" fitWidth="57.0" layoutX="12.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/rook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bishopBR" fitHeight="72.0" fitWidth="65.0" layoutX="351.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/bishop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="knightBL" fitHeight="91.0" fitWidth="47.0" layoutX="84.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/knight.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rookBR" fitHeight="78.0" fitWidth="57.0" layoutX="487.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/rook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bishopBL" fitHeight="72.0" fitWidth="65.0" layoutX="148.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/bishop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="knightBR" fitHeight="79.0" fitWidth="47.0" layoutX="413.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/knight.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kingB" fitHeight="72.0" fitWidth="77.0" layoutX="286.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/king.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="queenB" fitHeight="91.0" fitWidth="43.0" layoutX="220.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/queen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB1" fitHeight="72.0" fitWidth="43.0" layoutX="14.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB3" fitHeight="72.0" fitWidth="43.0" layoutX="148.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB2" fitHeight="72.0" fitWidth="43.0" layoutX="86.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB5" fitHeight="72.0" fitWidth="43.0" layoutX="286.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB4" fitHeight="72.0" fitWidth="43.0" layoutX="220.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB7" fitHeight="72.0" fitWidth="43.0" layoutX="417.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB6" fitHeight="72.0" fitWidth="43.0" layoutX="351.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnB8" fitHeight="72.0" fitWidth="43.0" layoutX="489.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/black/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rookWL" fitHeight="88.0" fitWidth="47.0" layoutX="12.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/rook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rookWR" fitHeight="88.0" fitWidth="47.0" layoutX="487.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/rook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="knightWL" fitHeight="79.0" fitWidth="55.0" layoutX="84.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/knight.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="knightWR" fitHeight="79.0" fitWidth="55.0" layoutX="417.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/knight.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bishopWL" fitHeight="113.0" fitWidth="47.0" layoutX="152.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/bishop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bishopWR" fitHeight="113.0" fitWidth="47.0" layoutX="351.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/bishop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="queenW" fitHeight="79.0" fitWidth="47.0" layoutX="284.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/queen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kingW" fitHeight="79.0" fitWidth="89.0" layoutX="218.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/king.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW1" fitHeight="72.0" fitWidth="47.0" layoutX="14.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW8" fitHeight="72.0" fitWidth="47.0" layoutX="489.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW7" fitHeight="72.0" fitWidth="47.0" layoutX="419.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW6" fitHeight="72.0" fitWidth="47.0" layoutX="353.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW5" fitHeight="72.0" fitWidth="47.0" layoutX="286.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW4" fitHeight="72.0" fitWidth="47.0" layoutX="218.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW3" fitHeight="72.0" fitWidth="47.0" layoutX="154.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pawnW2" fitHeight="72.0" fitWidth="47.0" layoutX="86.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/white/pawn.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
