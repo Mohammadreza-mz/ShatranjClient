@@ -12,4 +12,8 @@ public class SignUpPageController {
 
     public void createPressed(ActionEvent actionEvent) {
     }
+
+    public void backPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/HomePage.fxml");
+    }
 }

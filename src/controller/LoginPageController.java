@@ -15,7 +15,14 @@ public class LoginPageController {
     @FXML
     Label wrongLabel;
 
-    public void loginPressed(ActionEvent actionEvent) {
+    public void loginPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/LoginPage.fxml");
+    }
 
+    public void backPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/HomePage.fxml");
+    }
+
+    public void forgotPasswordPressed(ActionEvent actionEvent) {
     }
 }

@@ -11,6 +11,7 @@ public class HomePageController {
         new PageLoader().load("../view/LoginPage.fxml");
     }
 
-    public void infoPressed(ActionEvent actionEvent) {
+    public void infoPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/InfoPage.fxml");
     }
 }
