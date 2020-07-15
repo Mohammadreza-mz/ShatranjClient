@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InfoPageController">
+   <children>
+      <Button layoutX="464.0" layoutY="323.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="25.0" prefWidth="63.0" text="Back" />
+      <TextArea layoutX="51.0" layoutY="26.0" prefHeight="200.0" prefWidth="499.0" text="          شطرنج آنلاین:                                                                                                                              &#10;  این برنامه توسط محمدرضا محمدزاده اصل به شماره دانشجویی 98243097 دانشجوی رشته            &#10;مهندسی کامپیوتر نوشته شده.                                                                                                      &#10;درباره ی بازی:                                                                                                                              &#10;در این بازی می توان به صورت آنلاین با یک بازیکن دیگر شطرنج بازی کرد و امکاناتی مانند               &#10; چت با حریف، مشاهده بازی های قبلی و مشاهده بازیکنان با بیشترین برد وجود دارد.                       &#10; همچنین بازیکنان می توانند اکانت کاربری خود را در صورت تمایل حذف نمایند.                                   " />
+   </children>
+</AnchorPane>
