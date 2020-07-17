@@ -11,5 +11,6 @@
       <Button layoutX="207.0" layoutY="188.0" mnemonicParsing="false" onAction="#scoreBoardPressed" prefHeight="25.0" prefWidth="186.0" text="Score Board" />
       <Button layoutX="207.0" layoutY="279.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="25.0" prefWidth="186.0" text="Profile" />
       <Button layoutX="207.0" layoutY="141.0" mnemonicParsing="false" onAction="#watchOthersGamesPressed" prefHeight="25.0" prefWidth="186.0" text="Watch Other's Games" />
+      <Button layoutX="504.0" layoutY="339.0" mnemonicParsing="false" onAction="#logoutPressed" text="Logout" />
    </children>
 </AnchorPane>

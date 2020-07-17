@@ -16,7 +16,8 @@ public class LoginPageController {
     Label wrongLabel;
 
     public void loginPressed(ActionEvent actionEvent) throws Exception {
-        new PageLoader().load("../view/LoginPage.fxml");
+        //just for testing we don't check user and pass
+        new PageLoader().load("../view/MenuPage.fxml");
     }
 
     public void backPressed(ActionEvent actionEvent) throws Exception {

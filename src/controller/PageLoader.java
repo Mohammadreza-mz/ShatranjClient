@@ -11,13 +11,13 @@ public class PageLoader {
     public static void initStage(Stage primaryStage){
         stage= primaryStage;
         primaryStage.setTitle("Online Chess");
-        stage.setWidth(700);
-        stage.setHeight(600);
+        stage.setWidth(750);
+        stage.setHeight(700);
     }
 
     public void load(String url) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource(url));
-        stage.setScene(new Scene(root, 600, 550));
+        stage.setScene(new Scene(root, 750, 750));
         stage.show();
     }
 }

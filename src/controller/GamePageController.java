@@ -1,6 +1,9 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.ImageView;
 
 public class GamePageController {
@@ -33,4 +36,16 @@ public class GamePageController {
     @FXML
     ImageView pawnW1,pawnW2,pawnW3,pawnW4,pawnW5,pawnW6,pawnW7,pawnW8;
 
+    @FXML
+    ChoiceBox<String> from,to;
+
+
+    public void helpPressed(ActionEvent actionEvent) {
+        Alert alert= new Alert(Alert.AlertType.INFORMATION,"برای حرکت دادن مهره ها، مهره مورد نظر خود و هدف را از پایین صفحه انتخاب کنید و Move را بزنید");
+        alert.showAndWait();
+    }
+
+    public void movePressed(ActionEvent actionEvent) {
+
+    }
 }
