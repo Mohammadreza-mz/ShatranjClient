@@ -1,9 +1,15 @@
 package model.game;
 
+import javafx.scene.image.Image;
+
 public class Queen extends Piece {
 
     public Queen(int x, int y, Color color, Board board) {
         super(x, y, color, board);
+        if(color.equals(Color.WHITE))
+            image=new Image(getClass().getResource("/images/white/queen.png").toExternalForm());
+        else
+            image=new Image(getClass().getResource("/images/black/queen.png").toExternalForm());
     }
 
     @Override

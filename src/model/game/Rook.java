@@ -1,9 +1,15 @@
 package model.game;
 
+import javafx.scene.image.Image;
+
 public class Rook extends Piece {
 
     public Rook(int x, int y, Color color, Board board) {
         super(x, y, color, board);
+        if(color.equals(Color.WHITE))
+            image=new Image(getClass().getResource("/images/white/rook.png").toExternalForm());
+        else
+            image=new Image(getClass().getResource("/images/black/rook.png").toExternalForm());
     }
 
     @Override

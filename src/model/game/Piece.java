@@ -1,12 +1,14 @@
 package model.game;
 
 
+import javafx.scene.image.Image;
 
 public abstract class Piece {
     public int x,y;
     public Color color;
     public Board board;
     public boolean playing=true;
+    public Image image;
 
     public Piece(int x, int y, Color color, Board board) {
         this.x = x;
@@ -16,7 +18,7 @@ public abstract class Piece {
     }
 
     public static boolean fitInBoard(int x, int y){
-        if(x<1 || x>8 || y<1 || y>8)
+        if(x<0 || x>7 || y<0 || y>7)
             return false;
         return true;
     }

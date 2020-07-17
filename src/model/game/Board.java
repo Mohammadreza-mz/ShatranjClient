@@ -1,7 +1,9 @@
 package model.game;
 
-public class Board {
-    private Piece[][] cells= new Piece[8][8];
+import java.io.Serializable;
+
+public class Board implements Serializable {
+    public Piece[][] cells= new Piece[8][8];
 
     public Board() {
         //
