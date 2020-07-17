@@ -1,4 +1,5 @@
 package model.interactWithServer;
 
-public class GameIntractOutput {
+public class Logout {
+    User user;
 }
