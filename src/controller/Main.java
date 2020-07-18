@@ -8,7 +8,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         PageLoader.initStage(primaryStage);
-        new PageLoader().load("../view/GamePage.fxml");
+        new PageLoader().load("../view/IpEnteringPage.fxml");
     }
 
 

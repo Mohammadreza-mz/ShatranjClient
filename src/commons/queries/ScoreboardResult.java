@@ -1,4 +1,4 @@
-package model.interactWithServer;
+package commons.queries;
 
 import java.util.ArrayList;
 

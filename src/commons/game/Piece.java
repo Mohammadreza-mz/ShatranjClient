@@ -1,14 +1,12 @@
-package model.game;
+package commons.game;
 
-
-import javafx.scene.image.Image;
 
 public abstract class Piece {
     public int x,y;
     public Color color;
     public Board board;
     public boolean playing=true;
-    public Image image;
+    public String imagePath;
 
     public Piece(int x, int y, Color color, Board board) {
         this.x = x;

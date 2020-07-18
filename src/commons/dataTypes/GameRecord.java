@@ -1,6 +1,6 @@
-package model.interactWithServer;
+package commons.dataTypes;
 
-import model.game.Player;
+import commons.game.Player;
 
 import java.io.Serializable;
 

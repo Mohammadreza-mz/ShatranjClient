@@ -3,175 +3,176 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#updateTo" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePageController">
    <children>
       <ImageView fitHeight="546.0" fitWidth="564.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/board.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="rookBL" fitHeight="78.0" fitWidth="57.0" layoutX="12.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="rookBL" fitHeight="75.0" fitWidth="45.0" layoutX="12.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/rook.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bishopBR" fitHeight="72.0" fitWidth="65.0" layoutX="351.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bishopBR" fitHeight="75.0" fitWidth="45.0" layoutX="351.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/bishop.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="knightBL" fitHeight="91.0" fitWidth="47.0" layoutX="84.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="knightBL" fitHeight="75.0" fitWidth="45.0" layoutX="84.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/knight.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="rookBR" fitHeight="78.0" fitWidth="57.0" layoutX="487.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="rookBR" fitHeight="75.0" fitWidth="45.0" layoutX="487.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/rook.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bishopBL" fitHeight="72.0" fitWidth="65.0" layoutX="148.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bishopBL" fitHeight="75.0" fitWidth="45.0" layoutX="148.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/bishop.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="knightBR" fitHeight="79.0" fitWidth="47.0" layoutX="413.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="knightBR" fitHeight="75.0" fitWidth="45.0" layoutX="413.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/knight.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="kingB" fitHeight="72.0" fitWidth="77.0" layoutX="286.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="kingB" fitHeight="75.0" fitWidth="45.0" layoutX="286.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/king.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="queenB" fitHeight="91.0" fitWidth="43.0" layoutX="220.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="queenB" fitHeight="75.0" fitWidth="45.0" layoutX="220.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/queen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB1" fitHeight="72.0" fitWidth="43.0" layoutX="14.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB1" fitHeight="75.0" fitWidth="45.0" layoutX="14.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB3" fitHeight="72.0" fitWidth="43.0" layoutX="148.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB3" fitHeight="75.0" fitWidth="45.0" layoutX="148.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB2" fitHeight="72.0" fitWidth="43.0" layoutX="86.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB2" fitHeight="75.0" fitWidth="45.0" layoutX="84.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB5" fitHeight="72.0" fitWidth="43.0" layoutX="286.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB5" fitHeight="75.0" fitWidth="43.0" layoutX="286.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB4" fitHeight="72.0" fitWidth="43.0" layoutX="220.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB4" fitHeight="75.0" fitWidth="45.0" layoutX="220.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB7" fitHeight="72.0" fitWidth="43.0" layoutX="417.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB7" fitHeight="75.0" fitWidth="43.0" layoutX="419.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB6" fitHeight="72.0" fitWidth="43.0" layoutX="351.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB6" fitHeight="75.0" fitWidth="43.0" layoutX="351.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnB8" fitHeight="72.0" fitWidth="43.0" layoutX="489.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnB8" fitHeight="75.0" fitWidth="43.0" layoutX="489.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/black/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="rookWL" fitHeight="88.0" fitWidth="47.0" layoutX="12.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="rookWL" fitHeight="75.0" fitWidth="45.0" layoutX="12.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/rook.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="rookWR" fitHeight="88.0" fitWidth="47.0" layoutX="487.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="rookWR" fitHeight="75.0" fitWidth="45.0" layoutX="487.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/rook.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="knightWL" fitHeight="79.0" fitWidth="55.0" layoutX="84.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="knightWL" fitHeight="75.0" fitWidth="45.0" layoutX="84.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/knight.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="knightWR" fitHeight="79.0" fitWidth="55.0" layoutX="417.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="knightWR" fitHeight="75.0" fitWidth="45.0" layoutX="417.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/knight.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bishopWL" fitHeight="113.0" fitWidth="47.0" layoutX="152.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bishopWL" fitHeight="75.0" fitWidth="45.0" layoutX="152.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/bishop.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bishopWR" fitHeight="113.0" fitWidth="47.0" layoutX="351.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bishopWR" fitHeight="75.0" fitWidth="45.0" layoutX="351.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/bishop.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="queenW" fitHeight="79.0" fitWidth="47.0" layoutX="284.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="queenW" fitHeight="75.0" fitWidth="45.0" layoutX="284.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/queen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="kingW" fitHeight="79.0" fitWidth="89.0" layoutX="218.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="kingW" fitHeight="75.0" fitWidth="45.0" layoutX="218.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/king.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW1" fitHeight="72.0" fitWidth="47.0" layoutX="14.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW1" fitHeight="75.0" fitWidth="45.0" layoutX="14.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW8" fitHeight="72.0" fitWidth="47.0" layoutX="489.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW8" fitHeight="75.0" fitWidth="45.0" layoutX="489.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW7" fitHeight="72.0" fitWidth="47.0" layoutX="419.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW7" fitHeight="75.0" fitWidth="45.0" layoutX="419.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW6" fitHeight="72.0" fitWidth="47.0" layoutX="353.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW6" fitHeight="75.0" fitWidth="45.0" layoutX="353.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW5" fitHeight="72.0" fitWidth="47.0" layoutX="286.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW5" fitHeight="75.0" fitWidth="45.0" layoutX="286.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW4" fitHeight="72.0" fitWidth="47.0" layoutX="218.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW4" fitHeight="75.0" fitWidth="45.0" layoutX="218.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW3" fitHeight="72.0" fitWidth="47.0" layoutX="154.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW3" fitHeight="75.0" fitWidth="45.0" layoutX="154.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pawnW2" fitHeight="72.0" fitWidth="47.0" layoutX="86.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pawnW2" fitHeight="75.0" fitWidth="45.0" layoutX="86.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/white/pawn.png" />
          </image>
@@ -257,7 +258,7 @@
          </font>
       </Label>
       <ChoiceBox fx:id="from" layoutX="99.0" layoutY="596.0" prefHeight="25.0" prefWidth="65.0" />
-      <Button layoutX="623.0" layoutY="596.0" mnemonicParsing="false" onAction="#helpPressed" text="Help" />
+      <Button layoutX="665.0" layoutY="596.0" mnemonicParsing="false" onAction="#helpPressed" text="Help" />
       <ChoiceBox fx:id="to" layoutX="233.0" layoutY="596.0" prefHeight="25.0" prefWidth="65.0" />
       <Label layoutX="32.0" layoutY="593.0" text="Move:">
          <font>
@@ -270,5 +271,26 @@
          </font>
       </Label>
       <Button layoutX="327.0" layoutY="596.0" mnemonicParsing="false" onAction="#movePressed" text="Move!" />
+      <Button layoutX="644.0" layoutY="551.0" mnemonicParsing="false" onAction="#leaveGamePressed" text="Leave game!" />
+      <Button layoutX="641.0" layoutY="507.0" mnemonicParsing="false" onAction="#backToMenuPressed" text="Back to menu" />
+      <ListView fx:id="messageList" layoutX="623.0" layoutY="39.0" prefHeight="235.0" prefWidth="335.0" />
+      <TextField fx:id="messageField" layoutX="623.0" layoutY="301.0" prefHeight="25.0" prefWidth="275.0" />
+      <Button layoutX="912.0" layoutY="301.0" mnemonicParsing="false" onAction="#sendPressed" text="Send!" />
+      <Label layoutX="623.0" layoutY="346.0" text="Quick reaction:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="622.0" layoutY="386.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="wow!" />
+      <Button layoutX="685.0" layoutY="386.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="LOL" />
+      <Button layoutX="739.0" layoutY="386.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="Nice move!" />
+      <Button layoutX="829.0" layoutY="386.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="Nooooo!" />
+      <Button layoutX="912.0" layoutY="386.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="Hahaha" />
+      <Button layoutX="623.0" layoutY="431.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="😈😈😈" />
+      <Button layoutX="685.0" layoutY="431.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="😂😂😂" />
+      <Button layoutX="745.0" layoutY="431.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="😐😐😐" />
+      <Button layoutX="804.0" layoutY="431.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️" />
+      <Button layoutX="877.0" layoutY="431.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="😒😒😒" />
+      <Button layoutX="935.0" layoutY="431.0" mnemonicParsing="false" onAction="#quickReactionPressed" text="GG!" />
    </children>
 </AnchorPane>

@@ -12,20 +12,20 @@ import java.net.Socket;
 public class IpEnteringPageController {
     @FXML
     TextField ip;
-    @FXML
-    TextField port;
+    int port=8080;
 
     public void connectPressed(ActionEvent actionEvent) {
         try {
-            Client.socket= new Socket(ip.getText(),Integer.parseInt(ip.getText()));
-        }
-        catch (NumberFormatException e){
-            Alert alert= new Alert(Alert.AlertType.INFORMATION,"the entered Port is wrong!");
-            alert.showAndWait();
+            Socket socket= new Socket(ip.getText(),port);
+            System.out.println(ip.getText());
+            Client.setSocket(socket);
+            new PageLoader().load("../view/HomePage.fxml");
         }
         catch (IOException e){
             Alert alert= new Alert(Alert.AlertType.INFORMATION,"Problems detected while trying to connect to this IP!");
             alert.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

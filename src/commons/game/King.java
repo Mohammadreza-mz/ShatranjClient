@@ -1,15 +1,13 @@
-package model.game;
-
-import javafx.scene.image.Image;
+package commons.game;
 
 public class King extends Piece {
 
     public King(int x, int y, Color color, Board board) {
         super(x, y, color, board);
         if(color.equals(Color.WHITE))
-            image=new Image(getClass().getResource("/images/white/king.png").toExternalForm());
+            imagePath="/images/white/king.png";
         else
-            image=new Image(getClass().getResource("/images/black/king.png").toExternalForm());
+            imagePath="/images/black/king.png";
     }
 
     @Override

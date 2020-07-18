@@ -1,8 +1,12 @@
 package controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import model.interactWithServer.Client;
+import commons.queries.LoginRequest;
+import commons.queries.LoginResult;
 
 
 public class LoginPageController {
@@ -15,9 +19,30 @@ public class LoginPageController {
     @FXML
     Label wrongLabel;
 
+    public void initialize() {
+        Client.curPageController= this;
+    }
+
     public void loginPressed(ActionEvent actionEvent) throws Exception {
-        //just for testing we don't check user and pass
-        new PageLoader().load("../view/MenuPage.fxml");
+        Client.socketOutput.send(new LoginRequest(user.getText(),pass.getText()));
+    }
+
+    public void loginResult(LoginResult loginResult) {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                Alert alert= new Alert(Alert.AlertType.INFORMATION,loginResult.message);
+                alert.showAndWait();
+
+                if(loginResult.user!= null){
+                    try {
+                        new PageLoader().load("../view/MenuPage.fxml");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
     public void backPressed(ActionEvent actionEvent) throws Exception {

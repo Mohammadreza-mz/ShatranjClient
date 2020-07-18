@@ -11,7 +11,7 @@ public class PageLoader {
     public static void initStage(Stage primaryStage){
         stage= primaryStage;
         primaryStage.setTitle("Online Chess");
-        stage.setWidth(750);
+        stage.setWidth(1000);
         stage.setHeight(700);
     }
 

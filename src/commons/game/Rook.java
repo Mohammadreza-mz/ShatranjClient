@@ -1,15 +1,13 @@
-package model.game;
-
-import javafx.scene.image.Image;
+package commons.game;
 
 public class Rook extends Piece {
 
     public Rook(int x, int y, Color color, Board board) {
         super(x, y, color, board);
         if(color.equals(Color.WHITE))
-            image=new Image(getClass().getResource("/images/white/rook.png").toExternalForm());
+            imagePath="/images/white/rook.png";
         else
-            image=new Image(getClass().getResource("/images/black/rook.png").toExternalForm());
+            imagePath="/images/black/rook.png";
     }
 
     @Override

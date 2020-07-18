@@ -1,15 +1,13 @@
-package model.game;
-
-import javafx.scene.image.Image;
+package commons.game;
 
 public class Pawn extends Piece {
 
     public Pawn(int x, int y, Color color, Board board) {
         super(x, y, color, board);
         if(color.equals(Color.WHITE))
-            image=new Image(getClass().getResource("/images/white/pawn.png").toExternalForm());
+            imagePath="/images/white/pawn.png";
         else
-            image=new Image(getClass().getResource("/images/black/pawn.png").toExternalForm());
+            imagePath="/images/black/pawn.png";
     }
 
     @Override

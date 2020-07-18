@@ -1,15 +1,13 @@
-package model.game;
-
-import javafx.scene.image.Image;
+package commons.game;
 
 public class Bishop extends Piece {
 
     public Bishop(int x, int y, Color color, Board board) {
         super(x, y, color, board);
         if(color.equals(Color.WHITE))
-            image=new Image(getClass().getResource("/images/white/bishop.png").toExternalForm());
+            imagePath="/images/white/bishop.png";
         else
-            image=new Image(getClass().getResource("/images/black/bishop.png").toExternalForm());
+            imagePath="/images/black/bishop.png";
     }
 
     @Override

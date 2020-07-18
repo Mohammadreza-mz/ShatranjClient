@@ -1,6 +1,8 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import model.interactWithServer.Client;
+import commons.queries.Logout;
 
 public class MenuPageController {
     public void gameRequestPressed(ActionEvent actionEvent) {
@@ -20,7 +22,11 @@ public class MenuPageController {
     }
 
     public void logoutPressed(ActionEvent actionEvent) throws Exception {
-        // just for test
+        Client.socketOutput.send(new Logout(Client.curUser.username));
         new PageLoader().load("../view/HomePage.fxml");
+    }
+
+    public void infoPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/InfoPage.fxml");
     }
 }
