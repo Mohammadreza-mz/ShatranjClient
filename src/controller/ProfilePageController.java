@@ -2,15 +2,20 @@ package controller;
 
 import commons.queries.ChangePassword;
 import commons.queries.DeleteAccount;
+import commons.queries.ScoreboardRequest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import model.interactWithServer.Client;
 
-public class ProfilePageController {
+public class ProfilePageController extends DefaultController{
     @FXML
     TextField pass;
+
+    public void initialize() {
+        Client.curPageController= this;
+    }
 
     public void changePressed(ActionEvent actionEvent) {
         if(!pass.getText().matches("[A-Za-z0-9]*")){

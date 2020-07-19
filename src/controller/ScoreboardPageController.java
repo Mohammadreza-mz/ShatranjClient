@@ -10,7 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import model.interactWithServer.Client;
 
-public class ScoreboardPageController {
+public class ScoreboardPageController extends DefaultController{
     @FXML
     ListView<String> scoreboard;
     ObservableList<String> observableList= FXCollections.observableArrayList();

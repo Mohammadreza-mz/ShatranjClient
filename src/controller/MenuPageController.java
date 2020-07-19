@@ -4,7 +4,12 @@ import javafx.event.ActionEvent;
 import model.interactWithServer.Client;
 import commons.queries.Logout;
 
-public class MenuPageController {
+public class MenuPageController extends DefaultController{
+
+    public void initialize() {
+        Client.curPageController= this;
+    }
+
     public void gameRequestPressed(ActionEvent actionEvent) throws Exception {
         new PageLoader().load("../view/MatchMakingPage.fxml");
     }

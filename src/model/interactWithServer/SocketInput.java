@@ -38,6 +38,21 @@ public class SocketInput implements Runnable{
                 if (object instanceof ScoreboardResult){
                     Client.receivedScoreboard((ScoreboardResult) object);
                 }
+                if(object instanceof GameRequest){
+                    Client.receivedGameRequest((GameRequest) object);
+                }
+                if(object instanceof GameAccepted){
+                    Client.receivedGameAccepted((GameAccepted) object);
+                }
+                if(object instanceof GameFailed){
+                    Client.receivedGameFailed((GameFailed) object);
+                }
+                if(object instanceof GameUpdate){
+                    Client.receivedGameUpdate((GameUpdate) object);
+                }
+                if(object instanceof GameEnd){
+                    Client.receivedGameEnd((GameEnd) object);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

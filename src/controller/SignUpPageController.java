@@ -52,7 +52,6 @@ public class SignUpPageController {
                     alert.showAndWait();
                 }
                 else{
-                    System.out.println("else...");
                     Alert alert= new Alert(Alert.AlertType.INFORMATION,"Welcome!");
                     alert.showAndWait();
                     try {

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 
-public class MatchMakingPageController {
+public class MatchMakingPageController extends DefaultController{
 
     @FXML
     TextField searchBar;

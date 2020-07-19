@@ -14,10 +14,13 @@ public class IpEnteringPageController {
     TextField ip;
     int port=8080;
 
+    public void initialize() {
+        Client.curPageController= this;
+    }
+
     public void connectPressed(ActionEvent actionEvent) {
         try {
             Socket socket= new Socket(ip.getText(),port);
-            System.out.println(ip.getText());
             Client.setSocket(socket);
             new PageLoader().load("../view/HomePage.fxml");
         }

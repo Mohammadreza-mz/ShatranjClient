@@ -11,7 +11,7 @@ import commons.game.Board;
 import commons.game.Player;
 import commons.queries.GameMessages;
 
-public class GamePageController {
+public class GamePageController extends DefaultController{
     @FXML
     ImageView rookBL,rookBR;
     @FXML

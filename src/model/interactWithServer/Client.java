@@ -1,13 +1,9 @@
 package model.interactWithServer;
 
-import commons.queries.SearchResult;
-import controller.LoginPageController;
-import controller.MatchMakingPageController;
-import controller.ScoreboardPageController;
-import controller.SignUpPageController;
-import commons.queries.LoginResult;
-import commons.queries.ScoreboardResult;
-import commons.queries.SignUpResult;
+import commons.game.Color;
+import commons.game.Game;
+import commons.queries.*;
+import controller.*;
 import commons.dataTypes.User;
 import commons.game.Board;
 import commons.game.Player;
@@ -18,8 +14,10 @@ import java.util.ArrayList;
 public class Client {
     public static Socket socket;
     public static User curUser;
-    public static Player curGamePlayer;
-    public static Board curBoard;
+    //public static Player curGamePlayer;
+    //public static Color curGameColor;
+    //public static Board curBoard;
+    public static Game curGame;
     public static SocketInput socketInput;
     public static SocketOutput socketOutput;
     public static Object curPageController;
@@ -65,5 +63,48 @@ public class Client {
     public static void receivedScoreboard(ScoreboardResult scoreboardResult){
         if(curPageController instanceof ScoreboardPageController)
             ((ScoreboardPageController) curPageController).updateScoreboard(scoreboardResult);
+    }
+
+    public static void receivedGameRequest(GameRequest gameRequest){
+        if(curPageController instanceof DefaultController)
+            ((DefaultController) curPageController).gameRequest(gameRequest);
+    }
+
+    public static void receivedGameAccepted(GameAccepted gameAccepted){
+        if(curGame == null){
+            if(curPageController instanceof DefaultController) {
+                long timeStamp=System.currentTimeMillis() / 1000;
+                curGame= new Game(gameAccepted.from,new Board(),Color.BLACK,timeStamp,0);
+                socketOutput.send(new GameUpdate(curUser.username,gameAccepted.from,new Board(),timeStamp,0));
+                ((DefaultController) curPageController).goTOGamePage();
+            }
+        }
+        else{
+            socketOutput.send(new GameFailed(curUser.username,gameAccepted.from));
+        }
+    }
+
+    public static void receivedGameFailed(GameFailed gameFailed){
+        if(curPageController instanceof DefaultController)
+            ((DefaultController) curPageController).gameFailed(gameFailed);
+    }
+
+    public static void receivedGameUpdate(GameUpdate gameUpdate){
+        if(curGame== null){
+            curGame= new Game(gameUpdate.from,gameUpdate.board,Color.WHITE,gameUpdate.timeStamp,0);
+            if(curPageController instanceof DefaultController)
+                ((DefaultController) curPageController).goTOGamePage();
+        }
+        else {
+            curGame.board = gameUpdate.board;
+        }
+        //curGame.totalMoves++;?????
+        //change turn
+    }
+
+    public static void receivedGameEnd(GameEnd gameEnd){
+        if(curPageController instanceof DefaultController)
+            ((DefaultController) curPageController).gameEnd(gameEnd);
+        curGame=null;
     }
 }

@@ -5,9 +5,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
    <children>
-      <Button layoutX="449.0" layoutY="309.0" mnemonicParsing="false" onAction="#infoPressed" prefHeight="25.0" prefWidth="75.0" text="Info" />
       <Button layoutX="246.0" layoutY="175.0" mnemonicParsing="false" onAction="#signUpPressed" prefHeight="25.0" prefWidth="103.0" text="Sign Up" />
       <Button layoutX="246.0" layoutY="221.0" mnemonicParsing="false" onAction="#loginPressed" prefHeight="25.0" prefWidth="103.0" text="Login" />
-      <Button layoutX="361.0" layoutY="309.0" mnemonicParsing="false" onAction="#backPressed" text="Change IP" />
+      <Button layoutX="463.0" layoutY="310.0" mnemonicParsing="false" onAction="#backPressed" text="Change IP" />
    </children>
 </AnchorPane>
