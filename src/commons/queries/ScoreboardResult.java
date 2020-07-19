@@ -1,7 +1,12 @@
 package commons.queries;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.util.LinkedList;
 
-public class ScoreboardResult {
-    ArrayList<String> scoreboard;
+public class ScoreboardResult implements Serializable {
+    public LinkedList<String> scoreboard;
+
+    public ScoreboardResult(LinkedList<String> scoreboard) {
+        this.scoreboard = scoreboard;
+    }
 }

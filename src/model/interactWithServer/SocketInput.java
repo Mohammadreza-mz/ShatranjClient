@@ -1,9 +1,6 @@
 package model.interactWithServer;
 
-import commons.queries.LoginResult;
-import commons.queries.ScoreboardResult;
-import commons.queries.SignUpRequest;
-import commons.queries.SignUpResult;
+import commons.queries.*;
 
 import java.io.*;
 import java.net.Socket;
@@ -35,7 +32,12 @@ public class SocketInput implements Runnable{
                 if(object instanceof SignUpResult){
                     Client.receivedSignUpResult((SignUpResult) object);
                 }
-
+                if (object instanceof SearchResult){
+                    Client.receivedSearchResult((SearchResult) object);
+                }
+                if (object instanceof ScoreboardResult){
+                    Client.receivedScoreboard((ScoreboardResult) object);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

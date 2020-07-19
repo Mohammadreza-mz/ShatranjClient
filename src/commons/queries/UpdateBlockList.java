@@ -3,11 +3,12 @@ package commons.queries;
 import java.io.Serializable;
 
 public class UpdateBlockList implements Serializable {
-    boolean isAddingUser;
-    String username;
+    public String username,blockedUsername;
+    public boolean isAddingUser;
 
-    public UpdateBlockList(boolean isAddingUser, String username) {
-        this.isAddingUser = isAddingUser;
+    public UpdateBlockList(String username, String blockedUsername, boolean isAddingUser) {
         this.username = username;
+        this.blockedUsername = blockedUsername;
+        this.isAddingUser = isAddingUser;
     }
 }

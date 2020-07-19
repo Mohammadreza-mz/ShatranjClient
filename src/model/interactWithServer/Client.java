@@ -1,6 +1,9 @@
 package model.interactWithServer;
 
+import commons.queries.SearchResult;
 import controller.LoginPageController;
+import controller.MatchMakingPageController;
+import controller.ScoreboardPageController;
 import controller.SignUpPageController;
 import commons.queries.LoginResult;
 import commons.queries.ScoreboardResult;
@@ -54,7 +57,13 @@ public class Client {
             ((SignUpPageController) curPageController).signUpResult(signUpResult);
     }
 
-    public static void receivedScoreboardResult(ScoreboardResult scoreboardResult){
+    public static void receivedSearchResult(SearchResult searchResult){
+        if(curPageController instanceof MatchMakingPageController)
+            ((MatchMakingPageController) curPageController).updateResult(searchResult);
+    }
 
+    public static void receivedScoreboard(ScoreboardResult scoreboardResult){
+        if(curPageController instanceof ScoreboardPageController)
+            ((ScoreboardPageController) curPageController).updateScoreboard(scoreboardResult);
     }
 }

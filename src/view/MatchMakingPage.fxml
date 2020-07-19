@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MatchMakingPageController">
+   <children>
+      <Button layoutX="94.0" layoutY="330.0" mnemonicParsing="false" onAction="#sendGameRequestPressed" text="Send Game request" visible="false" />
+      <ListView fx:id="result" layoutX="46.0" layoutY="91.0" prefHeight="195.0" prefWidth="485.0" />
+      <Button layoutX="249.0" layoutY="330.0" mnemonicParsing="false" onAction="#blockPressed" prefHeight="25.0" prefWidth="62.0" text="Block" visible="false" />
+      <Button layoutX="300.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchPressed" text="Search" />
+      <Button layoutX="479.0" layoutY="330.0" mnemonicParsing="false" onAction="#backPressed" text="Back" />
+      <TextField fx:id="searchBar" layoutX="46.0" layoutY="39.0" prefHeight="25.0" prefWidth="239.0" promptText="Username" />
+   </children>
+</AnchorPane>

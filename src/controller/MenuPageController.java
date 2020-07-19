@@ -5,13 +5,15 @@ import model.interactWithServer.Client;
 import commons.queries.Logout;
 
 public class MenuPageController {
-    public void gameRequestPressed(ActionEvent actionEvent) {
+    public void gameRequestPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/MatchMakingPage.fxml");
     }
 
     public void historyPressed(ActionEvent actionEvent) {
     }
 
-    public void scoreBoardPressed(ActionEvent actionEvent) {
+    public void scoreBoardPressed(ActionEvent actionEvent) throws Exception {
+        new PageLoader().load("../view/ScoreboardPage.fxml");
     }
 
     public void profilePressed(ActionEvent actionEvent) throws Exception {
