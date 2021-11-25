@@ -9,7 +9,7 @@
 # ShatranjClient
 # Ap Spring 99 final project
 ## client-side for online chess project implemented by Java FX
-This project was built using [GitHub Pages](https://mohammadreza-mz.github.io/ShatranjClient/).
+Project details on [GitHub Pages](https://mohammadreza-mz.github.io/ShatranjClient/).
 
 
 #### the main features of this project are:
