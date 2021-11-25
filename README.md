@@ -27,6 +27,10 @@ Project details on [GitHub Pages](https://mohammadreza-mz.github.io/ShatranjClie
 - Add bio in user profiles
 - Add multiple themes and multiple shapes for pieces
 
+#### Complexity improvement:
+- use trie data structure for Autocomplete
+- use ordered set for the scoreboard
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Mohammadreza-mz/ShatranjClient.svg?style=for-the-badge
